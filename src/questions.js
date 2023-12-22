@@ -42,8 +42,8 @@
     options: [
       { id: 0, text: "1", isCorrect:true },
       { id: 1, text: "2", isCorrect:false},
-      { id: 2, text: "3", isCorrect:false },
-      { id: 3, text: "4", isCorrect:false },
+      { id: 2, text: "3", isCorrect:false},
+      { id: 3, text: "4", isCorrect:false},
     ],
   },
   {
@@ -59,9 +59,9 @@
   {
     text: "Which of the following keywords is used to define a variable in Javascript?",
     options: [
-      { id: 0, text: "var", isCorrect:true },
+      { id: 0, text: "var", isCorrect:false },
       { id: 1, text: "let", isCorrect:false},
-      { id: 2, text: "both A and B", isCorrect:false },
+      { id: 2, text: "both A and B", isCorrect:true },
       { id: 3, text: "None of the above", isCorrect:false },
     ],
   },
@@ -69,9 +69,9 @@
   {
     text: "Which of the following methods is used to access HTML elements using Javascript?",
     options: [
-      { id: 0, text: "getElementbyId", isCorrect:true },
+      { id: 0, text: "getElementbyId", isCorrect:false },
       { id: 1, text: "getElementByClassName", isCorrect:false},
-      { id: 2, text: "both A and B", isCorrect:false },
+      { id: 2, text: "both A and B", isCorrect:true },
       { id: 3, text: "None of the above", isCorrect:false },
     ],
   },
