@@ -5,12 +5,14 @@ import QuestionBox from './QuestionBox'
 import { AppContext } from './Context'
 
 const Homepage = () => {
+    //changing the state of question box for conditional rendering
     const[question,setQuestion]=useState(false)
     const showQuestion=()=>{
         setQuestion(true)
     }
     const{isDark,setisDark}=useContext(AppContext)
   return (
+    //conditional rendring to show questionbox
     <>
     {question?(<QuestionBox />):(
 

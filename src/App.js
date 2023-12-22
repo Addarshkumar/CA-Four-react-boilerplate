@@ -6,13 +6,20 @@ import Homepage from "./components/homepage";
 import { AppContext } from "./components/Context";
 
 function App() {
+
+//destructuring isDark from context
   const { isDark, setisDark } = useContext(AppContext);
+
+//toggle between isDark and !isDark
 
   const toggleDarkMode = () => {
     setisDark(!isDark);
   };
 
+
+
   return (
+    //changing the backgroundcolor on the basis of isDark
     <body style={{backgroundColor:isDark?"black":"white",height:'100vh'}}>
     <div style={{color:isDark?"white":"black"}}>
       <div style={{textAlign:"end",width:"80%"}}>

@@ -5,13 +5,19 @@ import Result from './Result';
 
 export default function QuestionBox() {
   // const [mode, setmode] = useState(false);
+
+  //setting useStates
   const [count, setcount] = useState(0);
   const [Highlight, sethighlight] = useState(false);
   const [showResult, setShowResult] = useState(false);
   const [score, setscore] = useState(0);
-  
+
+
+  //destructuring the text and options from questions
   const { text, options} = questions[count];
 
+
+//checking for correct answer and increasing score
   const next = (selectedOption) => {
     if (count === questions.length - 1) {
       setShowResult(true); 
@@ -39,6 +45,7 @@ export default function QuestionBox() {
   // };
 
   return (
+    //conditional rendering to show result page
     <div>
       {showResult ? (
         <Result />

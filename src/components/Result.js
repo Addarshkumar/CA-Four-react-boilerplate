@@ -2,6 +2,7 @@ import React,{useState,useEffect} from 'react'
 import "./Result.css"
 import Homepage from './homepage'
 import QuestionBox from './QuestionBox'
+// importing circle to show progress bar
 import {Circle} from "rc-progress"
 
 export default function Result() {
@@ -16,6 +17,8 @@ export default function Result() {
   // const changeMode=()=>{
   //   setmode(!mode)
   // }
+
+  //setting score to local storage
   let scoreValue=window.localStorage.getItem("score")
 
   let percentage=(scoreValue/10)*100
@@ -26,7 +29,7 @@ export default function Result() {
  
 
   return (
-
+  // conditional rendering between homepage and result page
     <div>
       {showQuestion?(<Homepage />):(
         <div className='result-container'>
@@ -46,6 +49,7 @@ export default function Result() {
   
 
    <h2 className='score'>{scoreValue} out 10 Answers are correct ({percentage} %)</h2>
+   <h3></h3>
    <div className='play-again-btn-cont'>
    <button className='play-again-btn' onClick={playAgain}>play Again</button>
    </div>

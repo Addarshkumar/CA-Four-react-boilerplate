@@ -65,6 +65,8 @@
 
 }
 
+/* code for device responsive */
+
 @media only screen and (max-width:400px){
     .question-container{
         margin-top:50px;
