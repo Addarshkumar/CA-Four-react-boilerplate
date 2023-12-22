@@ -65,7 +65,7 @@
 
 }
 
-@media only screen and (max-width:320px){
+@media only screen and (max-width:400px){
     .question-container{
         margin-top:50px;
     width: 300px;
