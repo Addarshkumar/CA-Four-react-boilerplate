@@ -43,26 +43,22 @@ export default function QuestionBox() {
       {showResult ? (
         <Result />
       ) : (
-        <div style={{
-          margin: "auto",
-          border: "1px solid black",
-          borderRadius: "20px",
-          marginTop: "100px",
-          width: "1200px",
-          height: "500px",
-          backgroundColor:"#efba42"
-        }}>
+        
+        <div className='question-container'>
           <div>
-            <h2 style={{ display: "flex", justifyContent: "center", color: Highlight ? "red" : "" }}>Question:{count + 1} out of 10</h2>
-            <h2 style={{ display: "flex", justifyContent: "center", color: Highlight ? "red" : "" }}>{text}</h2>
+            <h2 className='question' style={{ color: Highlight ? "red" : "" }}>Question:{count + 1} out of 10</h2>
+            <h2 className='question-text' style={{ color: Highlight ? "red" : "" }}>{text}</h2>
             <div className='options' onClick={() => { next(options[0]) }}>{options[0].text}</div>
             <div className='options' onClick={() => { next(options[1]) }}>{options[1].text}</div>
             <div className='options' onClick={() => { next(options[2]) }}>{options[2].text}</div>
             <div className='options' onClick={() => { next(options[3]) }}>{options[3].text}</div>
-            <button onClick={ishighlight} style={{ marginLeft: "500px", marginTop: "20px", width: "100px", height: "50px", backgroundColor: "red", fontSize: "20px", color: "white", borderRadius: "20px" }}>Highlight</button>
-            <button onClick={removehighlight} style={{ width: "200px", height: "50px", backgroundColor: "red", fontSize: "20px", color: "white", borderRadius: "20px" }}>remove Highlight</button>
+            <div className='btn-cont'>
+            <button className='highlight-btn' onClick={ishighlight} >Highlight</button>
+            <button className='remove-highlight-btn' onClick={removehighlight}>remove Highlight</button>
+            </div>
           </div>
         </div>
+        
       )}
     </div>
   );

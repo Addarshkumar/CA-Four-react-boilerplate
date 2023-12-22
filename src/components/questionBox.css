@@ -1,3 +1,17 @@
+.question-container{
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-evenly;
+    margin: auto;
+    border: 1px solid black;
+    border-radius: 20px;
+    margin-top: 100px;
+    width: 70%;
+    height: 70vh;
+    background-color:#efba42;
+}
 .options{
     width: 800px;
     height: 50px;
@@ -14,7 +28,62 @@
     box-shadow: 2px 2px 2px 2px ;
 }
 
-/* body{
-    background-image: url("https://t4.ftcdn.net/jpg/03/45/88/07/360_F_345880772_zIT2mkdCzTthplO7xqaGGrMspN0jw0ll.jpg");
-    background-size: cover;
-} */
+.highlight-btn{
+    margin-top: 10px;
+     width: 100px;
+     height: 50px;
+     background-Color:red;
+     font-Size: 20px;
+     color: white;
+     border-Radius: 20px;
+    
+}
+
+.remove-highlight-btn{
+    margin-top: 10px;
+    width: 200px;
+    height: 50px;
+    background-color: red;
+    font-size: 20px;
+    color: white;
+    border-radius: 20px;
+}
+
+.btn-cont{
+    display: flex;
+    justify-content: center;
+}
+
+.question{
+    display: flex;
+    justify-content: center;
+}
+
+.question-text{
+    display: flex;
+    justify-content: center;
+
+}
+
+@media only screen and (max-width:320px){
+    .question-container{
+        margin-top:50px;
+    width: 300px;
+    height: 500px;
+    }
+    .options{
+        width: 250px;
+    }
+    .highlight-btn{
+        margin-top: 10px;
+        width: 80px;
+        font-size: 15px;
+    }
+    .remove-highlight-btn{
+        margin-top: 10px;
+        width: 100px;
+        font-size: 15px;
+    }
+
+
+}

@@ -12,9 +12,10 @@ function App() {
   };
 
   return (
-    <div style={{ backgroundColor: isDark ? "black" : "white",height:"100vh" }}>
+    <body style={{backgroundColor:isDark?"black":"white",height:'100vh'}}>
+    <div>
       <button
-        style={{ backgroundColor:isDark?"white":"black",color:isDark?"black":"white",fontSize:"18px",width: "150px", height: "50px",marginLeft:"900px",borderRadius:"20px",position:"relative",top:"30px",left:"100px" }}
+        style={{ backgroundColor:isDark?"white":"black",color:isDark?"black":"white",fontSize:"18px",width: "150px", height: "50px",borderRadius:"20px",position:"relative",top:"30px",left:"150px" }}
         onClick={toggleDarkMode}
       >
         {isDark?"Light Mode" :"Dark Mode"}
@@ -22,6 +23,7 @@ function App() {
      {/* <QuestionBox /> */}
      <Result />
     </div>
+    </body>
   );
 }
 
