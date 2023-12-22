@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import "./App.css";
 import Result from "./components/Result";
 import QuestionBox from "./components/QuestionBox";
+import Homepage from "./components/homepage";
 import { AppContext } from "./components/Context";
 
 function App() {
@@ -13,15 +14,18 @@ function App() {
 
   return (
     <body style={{backgroundColor:isDark?"black":"white",height:'100vh'}}>
-    <div>
-      <button
-        style={{ backgroundColor:isDark?"white":"black",color:isDark?"black":"white",fontSize:"18px",width: "150px", height: "50px",borderRadius:"20px",position:"relative",top:"30px",left:"150px" }}
+    <div style={{color:isDark?"white":"black"}}>
+      <div style={{textAlign:"end",width:"80%"}}>
+      <button className="toggle"
+        style={{ backgroundColor:isDark?"white":"black",color:isDark?"black":"white"}}
         onClick={toggleDarkMode}
       >
         {isDark?"Light Mode" :"Dark Mode"}
       </button>
+      </div>
      {/* <QuestionBox /> */}
-     <Result />
+     {/* <Result /> */}
+     <Homepage />
     </div>
     </body>
   );

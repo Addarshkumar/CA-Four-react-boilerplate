@@ -1,5 +1,6 @@
 import React,{useState,useEffect} from 'react'
 import "./Result.css"
+import Homepage from './homepage'
 import QuestionBox from './QuestionBox'
 import {Circle} from "rc-progress"
 
@@ -27,12 +28,12 @@ export default function Result() {
   return (
 
     <div>
-      {showQuestion?(<QuestionBox />):(
+      {showQuestion?(<Homepage />):(
         <div className='result-container'>
-   <h1>Result</h1>
+   <h1 className='result'>Result</h1>
    <div class="progress-container">
     <Circle 
-    width="100px"
+    width="150px"
     percent={percentage}
     strokeColor="#4be823"
     strokeWidth={5}
@@ -44,7 +45,7 @@ export default function Result() {
 </div>
   
 
-   <h2>{scoreValue} out 10 Answers are correct ({percentage} %)</h2>
+   <h2 className='score'>{scoreValue} out 10 Answers are correct ({percentage} %)</h2>
    <div className='play-again-btn-cont'>
    <button className='play-again-btn' onClick={playAgain}>play Again</button>
    </div>
